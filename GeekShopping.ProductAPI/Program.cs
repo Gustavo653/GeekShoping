@@ -1,3 +1,4 @@
+using GeekShopping.ProductAPI.Config;
 using GeekShopping.ProductAPI.Model.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +15,9 @@ builder.Services.AddDbContext<MySQLContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("Default"),
         new MySqlServerVersion(
                 new Version())));
+
+builder.Services.AddSingleton(MappingConfig.RegisterMaps().CreateMapper());
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 
