@@ -1,12 +1,12 @@
 {
   "profiles": {
-    "GeekShopping.ProductAPI": {
+    "GeekShopping.Web": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:62045;http://localhost:62046"
+      "applicationUrl": "https://localhost:62047;http://localhost:62048"
     }
   }
 }
